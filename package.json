@@ -1,14 +1,36 @@
 {
   "name": "hgco",
   "version": "1.0.2",
-  "description": "",
+  "description": "simple command line utility adding a JIRA issue key to your mercurial commits automatically",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "email": "michmoreau.l@gmail.com",
+    "name": "Michel Moreau"
+  },
+  "license": "MIT",
   "bin": {
     "hgco": "./index.js"
-  }
+  },
+  "bugs": {
+    "email": "michmoreau.l@gmail.com",
+    "url": "https://github.com/MichelML/hgco/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichelML/hgco.git"
+  },
+  "homepage": "https://github.com/MichelML/hgco",
+  "keywords": [
+    "hgco",
+    "jira",
+    "command-line",
+    "commits",
+    "workflow",
+    "nodejs",
+    "javascript",
+    "mercurial"
+  ]
 }
