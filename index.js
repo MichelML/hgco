@@ -2,6 +2,11 @@
 const spawn = require('child_process').spawn
 const exec = require('child_process').exec
 
+if (process.argv.length === 1 || process.argv.length > 3) {
+  console.log('Error: Syntax invalid. Use the following terminal syntax when using hgco:\n\n"hgco -m \'your commit message goes here\'"\n\n')
+  process.exit()
+}
+
 exec('hg branch', (error, stdout, stderr) => {
   if (error) throw error
 
