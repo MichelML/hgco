@@ -9,8 +9,13 @@ exec('hg branch', (error, stdout, stderr) => {
   const JIRA_ISSUE_KEY = stdout.match(/\D{3,4}-\d{1,4}/)
 
   if (!COMMIT_MESSAGE || !JIRA_ISSUE_KEY) {
-    if (!COMMIT_MESSAGE) throw new Error('No commit message provided while it is required.\nUse the following terminal syntax when using hgco:\n"hgco -m \'your commit message goes here\'"')
-    if (!JIRA_ISSUE_KEY) throw new Error('No JIRA issue key found on your current branch. Make sure your branch name contains a JIRA issue key.')
+    if (!COMMIT_MESSAGE) {
+      console.log('Error: No commit message provided while it is required.\nUse the following terminal syntax when using hgco:\n"hgco -m \'your commit message goes here\'"')
+    }
+    if (!JIRA_ISSUE_KEY) {
+      console.log('Error: No JIRA issue key found on your current branch. Make sure your branch name contains a JIRA issue key.')
+    }
+    process.exit()
   } else {
     const hgco = spawn('hg', ['commit', '-m', `${COMMIT_MESSAGE} [${JIRA_ISSUE_KEY}]`], {stdio: 'inherit'})
 
