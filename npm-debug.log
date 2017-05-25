@@ -1,0 +1,108 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.4.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/mmlapointe/Desktop/hgco',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/mmlapointe/.npm/hgco/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/mmlapointe/.npm correctMkdir not in flight; initializing
+10 info lifecycle hgco@1.0.0~prepublish: hgco@1.0.0
+11 silly lifecycle hgco@1.0.0~prepublish: no script for prepublish, continuing
+12 info lifecycle hgco@1.0.0~prepare: hgco@1.0.0
+13 silly lifecycle hgco@1.0.0~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/mmlapointe/.npm/hgco/1.0.0/package.tgz',
+14 verbose tar pack   '/Users/mmlapointe/Desktop/hgco' ]
+15 verbose tarball /Users/mmlapointe/.npm/hgco/1.0.0/package.tgz
+16 verbose folder /Users/mmlapointe/Desktop/hgco
+17 verbose addLocalTarball adding from inside cache /Users/mmlapointe/.npm/hgco/1.0.0/package.tgz
+18 verbose correctMkdir /Users/mmlapointe/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd hgco@1.0.0
+20 verbose afterAdd /Users/mmlapointe/.npm/hgco/1.0.0/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/mmlapointe/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/mmlapointe/.npm/hgco/1.0.0/package/package.json written
+23 silly publish { name: 'hgco',
+23 silly publish   version: '1.0.0',
+23 silly publish   description: '<br> <br> <br> <img src=\'https://raw.githubusercontent.com/MichelML/hgco/master/hgco.png\' width=\'100\'>',
+23 silly publish   main: 'index.js',
+23 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+23 silly publish   author: '',
+23 silly publish   license: 'ISC',
+23 silly publish   bin: { hgco: './index.js' },
+23 silly publish   readme: '<br>\n<br>\n<br>\n<img src=\'https://raw.githubusercontent.com/MichelML/hgco/master/hgco.png\' width=\'100\'>\n\n# How it works  \n_hgco_ simply looks up at your current branch name, and if it contains a JIRA issue key, it adds it at the end of your commit message.  \n  \nIn any other case, _hgco_ throws and your commit is cancelled.  \n  \n# Install  \n```  \nnpm install -g hgco  \n```  \n\n# How to use  \n```\nhgco -m \'your commit message\'\n``` \n  \n# Maintainer  \nMichel Moreau - [michmoreau.l@gmail.com](mailto:michmoreau.l@gmail.com?Subject=hgco%20Project) \n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: '766d5fef48853a3f72a54861590246808bff2d9a',
+23 silly publish   _id: 'hgco@1.0.0',
+23 silly publish   _shasum: '81291399f4f4dd01901384e30d0cd857cf0b9b9f',
+23 silly publish   _from: '.' }
+24 info lifecycle hgco@1.0.0~prepublishOnly: hgco@1.0.0
+25 silly lifecycle hgco@1.0.0~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name hgco
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'hgco',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'hgco',
+30 silly mapToRegistry   name: 'hgco',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/hgco
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/mmlapointe/.npm/hgco/1.0.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/hgco
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 12:22:59 AM
+37 verbose request using bearer token for auth
+38 verbose request id 4c740113ca175a7c
+39 http request PUT https://registry.npmjs.org/hgco
+40 http 403 https://registry.npmjs.org/hgco
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '95',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Thu, 25 May 2017 04:23:01 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-jfk8129-JFK',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1495686181.529304,VS0,VE546',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /Users/mmlapointe/.npm/registry.npmjs.org/hgco on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : hgco
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid hgco
+47 verbose cwd /Users/mmlapointe/Desktop/hgco
+48 error Darwin 16.5.0
+49 error argv "/usr/local/Cellar/node/7.4.0/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v7.4.0
+51 error npm  v4.0.5
+52 error code E403
+53 error "You cannot publish over the previously published version 1.0.0." : hgco
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]

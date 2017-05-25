@@ -1,4 +1,7 @@
-<img src='https://raw.githubusercontent.com/MichelML/hgco/master/hgco.png' width='150'>
+<br>
+<br>
+<br>
+<img src='https://raw.githubusercontent.com/MichelML/hgco/master/hgco.png' width='100'>
 
 # How it works  
 _hgco_ simply looks up at your current branch name, and if it contains a JIRA issue key, it adds it at the end of your commit message.  
