@@ -1,7 +1,7 @@
 {
   "name": "hgco",
   "version": "1.0.10",
-  "description": "simple command line utility adding a JIRA issue key to your mercurial commits automatically",
+  "description": "command line utility adding a JIRA issue key to the end of your mercurial commit messages automatically",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
