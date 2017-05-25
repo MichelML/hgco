@@ -4,7 +4,11 @@ const exec = require('child_process').exec
 
 exec('hg branch', (error, stdout, stderr) => {
   if (error) throw (error)
-  const hgco = spawn('hg', ['commit', '-m', `${process.argv[process.argv.indexOf('-m') + 1]} [${stdout.match(/\D{3,4}-\d{3,4}/)[0]}]`], {stdio: 'inherit'})
+
+  const JIRA_ISSUE_KEY = stdout.match(/\D{3,4}-\d{1,4}/)
+  if (!JIRA_ISSUE_KEY) throw ('No JIRA issue key found on your current branch. Make sure your branch name contains a JIRA issue key.')
+
+  const hgco = spawn('hg', ['commit', '-m', `${process.argv[process.argv.indexOf('-m') + 1]} [${JIRA_ISSUE_KEY}]`], {stdio: 'inherit'})
 
   process.stdout.on('data', (data) => {
     console.log(data)
