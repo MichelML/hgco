@@ -5,7 +5,10 @@ const exec = require('child_process').exec
 exec('hg branch', (error, stdout, stderr) => {
   if (error) throw (error)
 
+  const COMMIT_MESSAGE = process.argv[process.argv.indexOf('-m') + 1]
   const JIRA_ISSUE_KEY = stdout.match(/\D{3,4}-\d{1,4}/)
+
+  if (!COMMIT_MESSAGE) throw ('No commit message provided while it is required.\nUse the following terminal syntax when using hgco:\n"hgco -m \'your commit message goes here\'"')
   if (!JIRA_ISSUE_KEY) throw ('No JIRA issue key found on your current branch. Make sure your branch name contains a JIRA issue key.')
 
   const hgco = spawn('hg', ['commit', '-m', `${process.argv[process.argv.indexOf('-m') + 1]} [${JIRA_ISSUE_KEY}]`], {stdio: 'inherit'})
