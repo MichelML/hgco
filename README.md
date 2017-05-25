@@ -1,6 +1,4 @@
 <br>
-<br>
-<br>
 <img src='https://raw.githubusercontent.com/MichelML/hgco/master/hgco.png' width='100'>
 
 # How it works  
