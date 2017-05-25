@@ -2,8 +2,8 @@
 const spawn = require('child_process').spawn
 const exec = require('child_process').exec
 
-if (process.argv.length === 1 || process.argv.length > 3) {
-  console.log('Error: Syntax invalid. Use the following terminal syntax when using hgco:\n\n"hgco -m \'your commit message goes here\'"\n\n')
+if (process.argv.length === 2) {
+  console.log('Error: Syntax invalid. Use the following terminal syntax when using hgco:\n\nhgco -m \'your commit message goes here\'\n\n')
   process.exit()
 }
 
@@ -15,7 +15,7 @@ exec('hg branch', (error, stdout, stderr) => {
 
   if (!COMMIT_MESSAGE || !JIRA_ISSUE_KEY) {
     if (!COMMIT_MESSAGE) {
-      console.log('Error: No commit message provided while it is required. Use the following terminal syntax when using hgco:\n\n"hgco -m \'your commit message goes here\'"\n\n')
+      console.log('Error: No commit message provided while it is required. Use the following terminal syntax when using hgco:\n\nhgco -m \'your commit message goes here\'\n\n')
       process.exit()
     }
     if (!JIRA_ISSUE_KEY) {
