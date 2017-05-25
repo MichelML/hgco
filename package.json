@@ -1,6 +1,6 @@
 {
   "name": "hgco",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "simple command line utility adding a JIRA issue key to your mercurial commits automatically",
   "main": "index.js",
   "scripts": {
