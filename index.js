@@ -16,11 +16,12 @@ exec('hg branch', (error, stdout, stderr) => {
   if (!COMMIT_MESSAGE || !JIRA_ISSUE_KEY) {
     if (!COMMIT_MESSAGE) {
       console.log('Error: No commit message provided while it is required. Use the following terminal syntax when using hgco:\n\n"hgco -m \'your commit message goes here\'"\n\n')
+      process.exit()
     }
     if (!JIRA_ISSUE_KEY) {
       console.log('Error: No JIRA issue key found in your current branch name. Make sure your branch name contains a JIRA issue key.')
+      process.exit()
     }
-    process.exit()
   } else {
     const hgco = spawn('hg', ['commit', '-m', `${COMMIT_MESSAGE} [${JIRA_ISSUE_KEY}]`], {stdio: 'inherit'})
 
