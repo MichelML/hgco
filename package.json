@@ -33,5 +33,9 @@
     "javascript",
     "mercurial",
     "cross-platform"
-  ]
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "shelljs": "^0.7.7"
+  }
 }
