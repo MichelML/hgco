@@ -12,7 +12,7 @@ shell.exec('hg branch', {silent: true}, (code, stdout, stderr) => {
   const jiraIssueKey = stdout.match(/\D{3,4}-\d{1,4}/)
   if (!jiraIssueKey) handleError('Error: No JIRA issue key found in your current branch name. Make sure your branch name contains a JIRA issue key.')
 
-  shell.exec(`hg commit -m '${commitMessage} [${jiraIssueKey}]'`)
+  shell.exec(`hg commit -m '${commitMessage} [${jiraIssueKey[0]}]'`)
 
   console.log('\nLast commit made:\n')
   shell.exec('hg log -l 1')
