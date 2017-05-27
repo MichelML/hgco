@@ -18,7 +18,8 @@ npm install -g hgco
 
 # How to use  
 ```bash
-hgco -m 'your commit message' # converts to "hg commit -m 'your commit message [<your JIRA issue key>]'"
+hgco -m 'your commit message' 
+# --> converts to "hg commit -m 'your commit message [<your JIRA issue key>]'"
 ``` 
 
 # Maintainer  
