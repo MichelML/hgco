@@ -7,7 +7,7 @@
 
 
 # How it works  
-_hgco_ simply looks up at your current branch name, and if it contains a JIRA issue key, it adds it at the end of your commit message.  
+_hgco_ looks up at your current branch name, and if it contains a JIRA issue key, _hgco_ adds the issue key at the end of your commit message.  
   
 In any other case, _hgco_ throws and your commit is canceled.  
   
