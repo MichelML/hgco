@@ -9,7 +9,7 @@ if (!commitMessage) handleError('Error: No commit message provided while it is r
 shell.exec('hg branch', {silent: true}, (code, stdout, stderr) => {
   if (stderr) handleError(stderr)
 
-  const jiraIssueKey = stdout.match(/\D{3,4}-\d{1,4}/)
+  const jiraIssueKey = stdout.match(/\D{3,10}-\d{1,4}/)
   if (!jiraIssueKey) handleError('Error: No JIRA issue key found in your current branch name. Make sure your branch name contains a JIRA issue key.')
 
   const commit = shell.exec(`hg commit -m '${commitMessage} [${jiraIssueKey[0]}]'`, {silent: true})
