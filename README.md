@@ -3,8 +3,6 @@
 <br>
 <a href="https://github.com/MichelML/hgco"><img src="https://badge.fury.io/js/hgco.svg" alt="npm version" height="18"></a>
 <a href="https://github.com/MichelML/hgco"><img src="https://img.shields.io/npm/dt/hgco.svg" alt="npm version" height="18"></a>
-<a href="https://github.com/MichelML/hgco"><img src="https://img.shields.io/librariesio/github/MichelML/hgco.svg" alt="npm version" height="18"></a>
-
 
 # How it works  
 _hgco_ looks up at your current branch name, and if it contains a JIRA issue key, _hgco_ adds the issue key at the end of your commit message.  
