@@ -36,6 +36,6 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "shelljs": "^0.7.7"
+    "shelljs": "^0.8.1"
   }
 }
