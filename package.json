@@ -1,6 +1,6 @@
 {
   "name": "hgco",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "description": "command line utility adding a JIRA issue key to the end of your mercurial commit messages automatically",
   "main": "index.js",
   "scripts": {
