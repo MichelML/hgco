@@ -3,7 +3,7 @@
 <br>
 <a href="https://github.com/MichelML/hgco"><img src="https://badge.fury.io/js/hgco.svg" alt="npm version" height="18"></a>
 <a href="https://github.com/MichelML/hgco"><img src="https://img.shields.io/npm/dt/hgco.svg" alt="npm version" height="18"></a>
-<a href="https://github.com/MichelML/hgco"><img src="https://david-dm.org/MichelML/hgco.svg" alt="npm version" height="18"></a>
+<a href="https://github.com/MichelML/hgco"><img src="https://img.shields.io/librariesio/github/MichelML/hgco.svg" alt="npm version" height="18"></a>
 
 
 # How it works  
